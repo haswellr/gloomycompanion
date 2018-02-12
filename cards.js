@@ -34,6 +34,9 @@ DECKS =
     ,   "Vermling Scout":   {name: "Vermling Scout", class: "Scout"}
     ,   "Vermling Shaman":    {name: "Vermling Shaman", class: "Shaman"}
     ,   "Wind Demon":         {name: "Wind Demon", class: "Wind Demon"}
+    ,   "Ghoul":              {name: "Ghoul", class: "Ghoul"}
+    ,   "Nether Magus":       {name: "Nether Magus", class: "Nether Magus"}
+    ,   "Aesther Wisp":       {name: "Aesther Wisp", class: "Aesther Wisp"}
 };
 
 DECK_DEFINITONS =
@@ -384,6 +387,42 @@ DECK_DEFINITONS =
             , [false, "43", "* %move% -1", "* %attack% +1", "** %range% +0", "** %air%%use_element%: %target% 2"]
             , [false, "43", "* %push% 1", "** Target all adjacent enemies", "* %attack% +0", "** %range% +0", "** %earth%%use_element%: -2 %range%"]
             , [false, "02", "* %shield% 1", "* %move% -1", "* %attack% -1", "** %range% +0", "* %any%%use_element%: %air%"]
+            ]
+        },
+        { class: "Ghoul"
+        , cards:
+          [ [false, "71", "* %move% -1", "* %attack% +1"]
+            , [true,  "64", "* %move% -1", "* %attack% +0", "** Heal X, where X is equal to the damage dealt"]
+            , [true,  "18", "* %move% -1", "* %attack% +0", "** Heal X, where X is equal to the damage dealt"]
+            , [false, "23", "* %move% +0", "* %attack% +0"]
+            , [false, "89", "* %attack% +2", "** Heal X, where X is equal to the damage dealt"]
+            , [false, "52", "* %move% +0", "* %attack% -1", "** %poison%"]
+            , [false, "31", "* %move% +1", "* %attack% -1"]
+            , [false, "48", "* %move% +0", "* %attack% +0"]
+            ]
+        },
+        { class: "Nether Magus"
+        , cards:
+          [ [false, "76", "* %move% +0", "* %attack% +0 %aoe-triangle-2-side%", "** %range% +0", "** %dark%%use_element%: +2 %attack%"]
+            , [true,  "85", "* %move% -1", "* %attack% +1 %aoe-triangle-2-side%", "** %range% +0"]
+            , [true,  "97", "* Summon 2 normal Aesther Wisps", "* %dark%"]
+            , [false, "95", "* Summon 2 normal Aesther Wisps"]
+            , [false, "74", "* %move% +0", "* %attack% +0", "** %range% +1", "** Repeat this attack against an enemy within range 2 of the target who has not been hit during this attack action"]
+            , [false, "67", "* %attack% -2 %aoe-circle%", "** %range% +0", "** %fire%%use_element%: +1 %attack%"]
+            , [false, "45", "* %move% +0", "* %attack% -1 %aoe-triangle-2-side%", "** %range% +0", "** %dark%%use_element%: +1 %curse%"]
+            , [false, "55", "* %attack% +1 %aoe-triangle-3-side-with-corner-black%", "* %dark%"]
+            ]
+        },
+        { class: "Aesther Wisp"
+        , cards:
+          [ [true, "62", "* %move% +0", "* %attack% +0", "** %range% +0", "** %any%%use_element%: +2 %attack%"]
+            , [true, "08", "* %move% +0", "* %attack% +0", "** %range% +0", "** %any%%use_element%: %shield% 3"]
+            , [false, "92", "* %move% -1", "* %attack% +0", "** %range% +0", "** %any%%use_element%: %stun%, %ice%"]
+            , [false, "42", "* %move% +3", "* %attack% -1", "** %range% +0", "** %any%%use_element%: %target% 3, %air%"]
+            , [false, "75", "* %move% +0", "* %attack% +1", "** %range% +0", "** %any%%use_element%: +2 %attack%, %fire%"]
+            , [false, "15", "* %move% -1", "* %attack% +0", "** %range% +0", "** %any%%use_element%: %retaliate% 3, %earth%"]
+            , [false, "59", "* %move% +0", "* %attack% +0", "** %range% +0", "** %any%%use_element%: %invisible%, %dark%"]
+            , [false, "32", "* %move% -1", "* %attack% +2", "** %range% +0", "** %any%%use_element%: %heal% 3, %light%"]
             ]
         }
 ];
