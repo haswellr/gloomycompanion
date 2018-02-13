@@ -767,6 +767,13 @@ SCENARIO_DEFINITIONS =
             ,   {"name": "Earth Demon"}
             ,   {"name": "Savvas Lavaflow"}
             ]
+        },
+        { name: "TLC #01 Chandar"
+        , decks:
+            [   {"name": "Ghoul"}
+            ,   {"name": "Nether Magus"}
+            ,   {"name": "Aesther Wisp"}
+            ]
         }
 
     ];
